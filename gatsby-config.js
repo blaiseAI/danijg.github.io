@@ -109,6 +109,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`
     },
+    {
+      resolve: `gatsby-plugin-twitter`
+    },
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {

@@ -1,7 +1,7 @@
 ---
 title: Two years developing with Vue. Distilled
 date: 2019-09-20
-tags: ['talk', 'conference', 'javascript', 'vue']
+tags: ['event', 'javascript', 'vue']
 ---
 
 <Embed

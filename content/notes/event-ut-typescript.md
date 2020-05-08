@@ -1,7 +1,7 @@
 ---
 title: Unit Testing Typescript
 date: 2015-11-17
-tags: ['talk', 'meetup', 'typescript', 'testing']
+tags: ['event', 'typescript', 'testing']
 ---
 
 I gave a talk all the way back in 2015 about unit testing and TypeScript as part of the Dublin TypeScript meetup.
