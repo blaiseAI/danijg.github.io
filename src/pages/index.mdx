@@ -1,35 +1,29 @@
 <AuthorBanner />
 <p>&nbsp;</p>
-<h3>Posts and Articles&nbsp;&nbsp;
-  <Link to='posts-and-articles'>
-    <Button style={{marginTop: '8px'}}>all posts and articles</Button>
+<h3>Articles&nbsp;&nbsp;
+  <Link to='articles'>
+    <Button style={{marginTop: '8px'}}>all articles</Button>
   </Link>
 </h3>
 
-<FeedItems 
-  itemsFormat="compact" 
-  filterByTags={['post', 'article']} 
-  limit={4} 
+<FeedItems
+  itemsFormat="compact"
+  filterByTags={['post', 'article']}
+  limit={5}
 />
 
-<p>&nbsp;</p>
-<h3>Podcasts&nbsp;&nbsp;
-  <Link to='tags/podcast'>
-    <Button style={{marginTop: '8px'}}>all podcasts</Button>
+<h3>Tutorials</h3>
+
+<FeedItems itemsFormat="compact" filterByTags={['tutorial']} limit={3} />
+
+<h3>Projects&nbsp;&nbsp;
+  <Link to='projects'>
+    <Button style={{marginTop: '8px'}}>all projects</Button>
   </Link>
 </h3>
 
-<FeedItems itemsFormat="compact" filterByTags={['podcast']} limit={3} />
+<FeedItems itemsFormat="compact" filterByTags={['project']} limit={5} />
 
-<p>&nbsp;</p>
+<h3>Talks</h3>
 
-### Certificates
-
-<FeedItems itemsFormat="compact" filterByTags={['certificate']} />
-
-<p>&nbsp;</p>
-
-### Projects
-
-<FeedItems itemsFormat="compact" filterByTags={['project']} />
-<p>&nbsp;</p>
+<FeedItems itemsFormat="compact" filterByTags={['talk']} limit={3} />
