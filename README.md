@@ -1,86 +1,73 @@
-<a href="https://chronoblog-profile.now.sh" target="_blank">
-<img src="https://github.com/Chronoblog/gatsby-theme-chronoblog/raw/master/assets/st-banner-profile.png" alt="Chronoblog - Gatsby Theme" />
-</a>
+# Daniel Jimenez Garcia website
 
-<h1 align="center">
-Gatsby Starter Chronoblog Profile - starter for Chronoblog Gatsby Theme
-</h1>
+Welcome to the source code of my personal website!
 
-[![npm](https://img.shields.io/npm/v/gatsby-theme-chronoblog?color=brightgreen)](https://www.npmjs.com/package/gatsby-theme-chronoblog) [![node](https://img.shields.io/node/v/gatsby-theme-chronoblog)](https://www.npmjs.com/package/gatsby-theme-chronoblog)
+The latest version of the site is available at https://danijg.github.io/.
 
-This starter will help you launch a personal website with a simple text feed on the main page. This starter looks simple and neat, but at the same time, it has great potential for organizing your content using tags, dates, and search.
+## Stack
+This website was:
 
-The homepage is organized in compact feeds. The display of content in these feeds is based on the tags of this content (for example, only content with a `podcast` tag gets into the feed with podcasts).
+- Built using [gatsbyjs](https://www.gatsbyjs.org/) and the [github.com/Chronoblog/gatsby-theme-chronoblog](https://github.com/Chronoblog/gatsby-theme-chronoblog).
+- Published to GitHub pages using GitHub actions.
 
-The starter is based on the Gatsby Theme Chronoblog.
+### Changes to the theme
+A couple of componnets were overriden to avoid breaking the DotNetCurry magazine articles. The original components would remove the `www.` prefix from these URLs, which results in broken links.
 
-What is a Chronoblog?
+### Github cards
+Repo cards are generated with [https://gh-card.dev/](https://gh-card.dev/). Note the repo should have a description!
 
-> Chronoblog is a Gatsby js theme specifically designed to create a personal website. The main idea of ​​Chronoblog is to allow you not only to write a personal blog but also to keep a record of everything important that you have done.
 
-Read more about Chronoblog Gatsby Theme here: [github.com/Chronoblog/gatsby-theme-chronoblog](https://github.com/Chronoblog/gatsby-theme-chronoblog)
+## Development
 
-**Live demo of this starter: [https://chronoblog-profile.now.sh](https://chronoblog-profile.now.sh/)**
+You can get the site running locally with a few steps:
 
-## Features
+1. Clone this repo
+    ```bash
+    git clone git@github.com:danijg.github.io.git
+    ```
+1. cd into the folder where it was cloned
+    ```bash
+    cd danijg.github.io
+    ```
+1. Switch to the **source branch**! This is very important since the master branch contains _the generated site_!
+    ```bash
+    git checkout source
+    ```
+1. Install the dependencies
+    ```bash
+    npm i
+    ```
+1. Run the local development server
+    ```bash
+    npm start
+    ```
 
-- Specially designed to create a personal website (in a simple and strict "text" style)
-- Universal text feed divided into categories
-- Search and Tags for organizing content
-- A simple change of primary and secondary colors of the site, fonts, radius of curvature of elements, etc (thanks to Theme UI theming)
-- Clean and Universal UI
-- Mobile friendly, all elements and custom images are adapted to any screen
-- Light/Dark mode
-- Easy customization of icons and links to your social networks
-- MDX for the main menu of the site, footer and other elements of the site
-- MDX for pages and content
-- Code syntax highlighting
-- SEO (OpenGraph and Twitter) out of the box with default settings that make sense (thanks to React Helmet)
+Then head to http://localhost:8000 in your browser.
+> If the port was in use, a different one will be used. Pay attention to the output of the command.
 
-## How to start using Chronoblog Profile Starter
+## Deployment
 
-If you have `gatsby-cli`:
+The site is deployed to GitHub pages.
 
-```sh
-gatsby new chronoblog-site https://github.com/Chronoblog/gatsby-starter-chronoblog-profile
+Since this is a user repo, the files for the GitHub pages site need to be located in the master branch of the repo. See [official docs](https://help.github.com/en/github/working-with-github-pages/about-github-pages#publishing-sources-for-github-pages-sites). (You could switch your "main" branch to a different branch, but then GitHub pages also needs the site files to be located there)
 
-cd chronoblog-site
+Deployment essentially means:
+1. run the build command `npm run build`, which generates the files in `./public`
+1. switch over to the folder where the static contents are generated `cd ./public`
+1. initialize a new git repo
+1. force push the contents of the `public` folder to master
 
-gatsby develop
-```
+### Automatic deploy via GitHub actions
+By commiting code to the `source` branch, you will trigger the configured [GitHub action](https://help.github.com/en/actions) workflow as per the `.github/workflows/deploy.yml` file.
 
-Or using git clone:
+The workflow file essentially codifies the steps outlined above.
+- Uses [Node action](https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions) to run the `npm` commands that build the site.
+- Users the community provided [github-push action](https://github.com/marketplace/actions/github-push) to force push the resulting files to the master branch.
 
-```sh
-git clone git@github.com:Ganevru/gatsby-starter-chronoblog-profile.git chronoblog-site
+### Manual deploy
 
-cd chronoblog-site
-
-npm i
-
-npm start
-```
-
-Your site is now running at http://localhost:8000
-
-## Deploying
-
-### Deploying to ZEIT Now
-
-Gatsby Docs: [www.gatsbyjs.org/docs/deploying-to-zeit-now](https://www.gatsbyjs.org/docs/deploying-to-zeit-now/)
-
-Quick Deployment:
-
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/Chronoblog/gatsby-starter-chronoblog-profile)
-
-### Deploying to Netlify
-
-Gatsby Docs: [www.gatsbyjs.org/docs/deploying-to-netlify](https://www.gatsbyjs.org/docs/deploying-to-netlify/)
-
-Quick Deployment:
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Chronoblog/gatsby-starter-chronoblog-profile)
-
-## More information
-
-For complete information, go to the main repository: [github.com/Chronoblog/gatsby-theme-chronoblog](https://github.com/Chronoblog/gatsby-theme-chronoblog)
+1. Make sure you are in the **source branch**, and not in master
+1. Run the deploy script
+    ```bash
+    ./deploy.sh
+    ```

@@ -8,7 +8,7 @@ module.exports = {
     siteLanguage: 'en',
     ogLanguage: `en_US`,
     author: 'Daniel Jimenez Garcia', // for example - 'Ivan Ganev'
-    authorDescription: 'Welcome! I am a SW developer who loves to code but spends most of his time at work fixing organizational and people problems. To counterbalance that, I like to write articles published in DotNetCurry and KaizenDorks, tutorials or simply experiment with some code!', // short text about the author
+    authorDescription: 'Welcome! I am a SW developer who loves to code and finding simple elegant solutions to problems. At work, these are mostly organizational and people problems. In my free time I like to write articles, tutorials or simply experiment with some code!', // short text about the author
     avatar: '/avatar.jpg',
     avatarAltText: 'Daniel Jimenez Garcia',
     twitterSite: '', // website account on twitter
