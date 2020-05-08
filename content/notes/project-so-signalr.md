@@ -1,7 +1,7 @@
 ---
 title: so-signalr
 date: 2019-05-11
-tags: ['project', 'javascript', 'vue' ,'asp-core', 'signalr']
+tags: ['project', 'javascript', 'vue' ,'asp-core', 'signalr', 'dotnetcurry']
 ---
 
 A mini Stack Overflow replica built using Vue, ASP.NET Core and SignalR.
