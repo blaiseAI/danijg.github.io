@@ -1,7 +1,7 @@
 ---
 title: Kubernetes for Developers
 date: 2020-04-03
-tags: ['tutorial', 'kubernetes']
+tags: ['tutorial', 'kubernetes', 'kaizendorks']
 link: https://kaizendorks.github.io/tutorials/kubernetes/
 ---
 
