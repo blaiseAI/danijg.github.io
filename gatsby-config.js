@@ -40,6 +40,11 @@ module.exports = {
         altText: 'KaizenDorks contributor'
       },
       {
+        icon: `linkedin`,
+        url: `https://www.linkedin.com/in/daniel-jg/`,
+        altText: 'LinkedIn profile'
+      },
+      {
         icon: `node-js`,
         url: `https://www.npmjs.com/~danijg`,
         altText: 'NPM packages'
